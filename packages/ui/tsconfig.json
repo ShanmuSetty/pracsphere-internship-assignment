@@ -1,0 +1,16 @@
+{
+  "extends": "../config/typescript/base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true
+  },
+  "include": [".", "../../apps/web/app/components/Topbar.tsx"],
+  "exclude": ["node_modules", "dist", "node_modules"]
+}
