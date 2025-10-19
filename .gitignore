@@ -1,9 +1,15 @@
 # Dependencies
-/node_modules
+node_modules/
 
-# Environment Variables
+# Turbo cache
+.turbo/
+
+# Next.js build & cache
+.next/
+
+# Environment variables
 .env
 .env.local
 
-# Next.js build output
-.next/
+# Log files
+*.log
