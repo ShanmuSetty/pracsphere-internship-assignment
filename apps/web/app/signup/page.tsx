@@ -19,27 +19,34 @@ export default function SignupPage() {
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    setIsLoading(true);
+  e.preventDefault();
+  setError("");
+  setIsLoading(true);
 
-    try {
-      // Simulate API call
-      setTimeout(() => {
-        if (name && email && password) {
-          console.log("Signup successful");
-          // router.push("/login");
-        } else {
-          setError("Please fill in all fields");
-        }
-        setIsLoading(false);
-      }, 1000);
-    } catch (err) {
-      console.error(err);
-      setError("Network error. Please try again later.");
-      setIsLoading(false);
+  try {
+    const res = await fetch("/api/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, password }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      setError(data.message || "Signup failed");
+    } else {
+      console.log("Signup successful:", data);
+      // Optionally redirect to login page
+      // router.push("/login");
     }
-  };
+  } catch (err) {
+    console.error(err);
+    setError("Network error. Please try again later.");
+  } finally {
+    setIsLoading(false);
+  }
+};
+
 
   return (
     <div className={`min-h-screen flex items-center justify-center p-4 relative overflow-hidden transition-colors duration-500 ${
