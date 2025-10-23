@@ -6,7 +6,7 @@ This is my submission for the Full-Stack Developer internship assignment from Sh
 
 The application is deployed on Vercel and available for review here:
 
-👉 **[https://pracsphere-internship-assignment-b9deswbgq.vercel.app/](https://pracsphere-internship-assignment-b9deswbgq.vercel.app/)**
+👉 **[https://pracsphere-internship-assignment-ayaj8ear1.vercel.app/](https://pracsphere-internship-assignment-ayaj8ear1.vercel.app/)**
 
 ## ✨ Features
 
