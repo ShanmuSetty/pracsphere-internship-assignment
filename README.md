@@ -2,6 +2,12 @@
 
 This is my submission for the Full-Stack Developer internship assignment from Shel-B Technologies Private Limited. The application is a task manager built on a modern tech stack including Next.js, TypeScript, Tailwind CSS, and MongoDB.
 
+## 🌐 Live Application
+
+The application is deployed on Vercel and available for review here:
+
+👉 **[https://pracsphere-internship-assignment-b9deswbgq.vercel.app/](https://pracsphere-internship-assignment-b9deswbgq.vercel.app/)**
+
 ## ✨ Features
 
 -   **User Authentication:** Secure user signup and login functionality using NextAuth.
