@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-
+import { useRouter } from "next/navigation";
 export default function SignupPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -10,7 +10,7 @@ export default function SignupPage() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isDark, setIsDark] = useState(true);
-
+const router = useRouter();
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
@@ -36,8 +36,8 @@ export default function SignupPage() {
       setError(data.message || "Signup failed");
     } else {
       console.log("Signup successful:", data);
-      // Optionally redirect to login page
-      // router.push("/login");
+      
+      router.push("/login");
     }
   } catch (err) {
     console.error(err);
