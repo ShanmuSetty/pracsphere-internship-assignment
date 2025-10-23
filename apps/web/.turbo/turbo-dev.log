@@ -1,5 +1,5 @@
 
-> web@0.1.0 dev /Users/shanmu/Desktop/clean 2/pracsphere-assignment/apps/web
+> web@0.1.0 dev /Users/shanmu/Documents/[2] Projects Related/React/clean 2/pracsphere-assignment/apps/web
 > next dev --turbopack
 
    [1m[38;2;173;127;168m▲ Next.js 15.5.6[39m[22m (Turbopack)
@@ -8,79 +8,30 @@
    - Environments: .env.local
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 950ms
- [37m[1m○[22m[39m Compiling /signup ...
- [32m[1m✓[22m[39m Compiled /signup in 1664ms
- GET /signup [32m200[39m in 1883ms
- [32m[1m✓[22m[39m Compiled /favicon.ico in 339ms
- GET /favicon.ico?favicon.0b3bf435.ico [32m200[39m in 549ms
- GET /api/auth/session [32m200[39m in 1310ms
- [32m[1m✓[22m[39m Compiled /login in 178ms
- GET /login [32m200[39m in 211ms
- GET /api/auth/providers [32m200[39m in 234ms
- GET /api/auth/csrf [32m200[39m in 230ms
- POST /api/auth/callback/credentials [32m200[39m in 307ms
- GET /api/auth/session [32m200[39m in 234ms
- [37m[1m○[22m[39m Compiling /dashboard ...
- [32m[1m✓[22m[39m Compiled /dashboard in 1145ms
- GET /dashboard [32m200[39m in 1231ms
- [32m[1m✓[22m[39m Compiled /dashboard/tasks in 189ms
- GET /dashboard/tasks [32m200[39m in 226ms
- [32m[1m✓[22m[39m Compiled /api/tasks in 103ms
- GET /api/tasks [32m200[39m in 358ms
- GET /api/tasks [32m200[39m in 276ms
- POST /api/tasks [32m201[39m in 269ms
- POST /api/tasks [32m201[39m in 256ms
- POST /api/tasks [32m201[39m in 253ms
- POST /api/tasks [32m201[39m in 254ms
- [32m[1m✓[22m[39m Compiled /api/tasks/[id] in 156ms
-Error: Route "/api/tasks/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-    at PUT (app/api/tasks/[id]/route.ts:15:13)
-[0m [90m 13 |[39m
- [90m 14 |[39m   [36mtry[39m {
-[31m[1m>[22m[39m[90m 15 |[39m     [36mconst[39m { id } [33m=[39m params[33m;[39m
- [90m    |[39m             [31m[1m^[22m[39m
- [90m 16 |[39m     [36mconst[39m { title[33m,[39m description[33m,[39m status } [33m=[39m [36mawait[39m request[33m.[39mjson()[33m;[39m
- [90m 17 |[39m     [36mconst[39m client [33m=[39m [36mawait[39m clientPromise[33m;[39m
- [90m 18 |[39m     [36mconst[39m db [33m=[39m client[33m.[39mdb([32m"pracsphere"[39m)[33m;[39m[0m
- PUT /api/tasks/68f54862566c6f65099c55a8 [32m200[39m in 1219ms
- GET /dashboard [32m200[39m in 60ms
- GET /dashboard/tasks [32m200[39m in 30ms
- GET /api/tasks [32m200[39m in 252ms
- GET /api/tasks [32m200[39m in 261ms
-Error: Route "/api/tasks/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-    at PUT (app/api/tasks/[id]/route.ts:15:13)
-[0m [90m 13 |[39m
- [90m 14 |[39m   [36mtry[39m {
-[31m[1m>[22m[39m[90m 15 |[39m     [36mconst[39m { id } [33m=[39m params[33m;[39m
- [90m    |[39m             [31m[1m^[22m[39m
- [90m 16 |[39m     [36mconst[39m { title[33m,[39m description[33m,[39m status } [33m=[39m [36mawait[39m request[33m.[39mjson()[33m;[39m
- [90m 17 |[39m     [36mconst[39m client [33m=[39m [36mawait[39m clientPromise[33m;[39m
- [90m 18 |[39m     [36mconst[39m db [33m=[39m client[33m.[39mdb([32m"pracsphere"[39m)[33m;[39m[0m
- PUT /api/tasks/68f5482f566c6f65099c55a5 [32m200[39m in 323ms
-Error: Route "/api/tasks/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-    at PUT (app/api/tasks/[id]/route.ts:15:13)
-[0m [90m 13 |[39m
- [90m 14 |[39m   [36mtry[39m {
-[31m[1m>[22m[39m[90m 15 |[39m     [36mconst[39m { id } [33m=[39m params[33m;[39m
- [90m    |[39m             [31m[1m^[22m[39m
- [90m 16 |[39m     [36mconst[39m { title[33m,[39m description[33m,[39m status } [33m=[39m [36mawait[39m request[33m.[39mjson()[33m;[39m
- [90m 17 |[39m     [36mconst[39m client [33m=[39m [36mawait[39m clientPromise[33m;[39m
- [90m 18 |[39m     [36mconst[39m db [33m=[39m client[33m.[39mdb([32m"pracsphere"[39m)[33m;[39m[0m
- PUT /api/tasks/68f54853566c6f65099c55a7 [32m200[39m in 305ms
- GET /dashboard [32m200[39m in 60ms
- GET /dashboard/tasks [32m200[39m in 36ms
- GET /api/tasks [32m200[39m in 252ms
- GET /api/tasks [32m200[39m in 251ms
- [32m[1m✓[22m[39m Compiled /dashboard/profile in 284ms
- GET /dashboard/profile [32m200[39m in 348ms
- GET /dashboard [32m200[39m in 60ms
- GET /dashboard/tasks [32m200[39m in 33ms
- GET /api/tasks [32m200[39m in 257ms
- GET /api/tasks [32m200[39m in 249ms
- GET /dashboard [32m200[39m in 56ms
+ [32m[1m✓[22m[39m Ready in 891ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 1879ms
+ GET / [32m200[39m in 2113ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 336ms
+ GET /api/auth/session [32m200[39m in 1410ms
+ [32m[1m✓[22m[39m Compiled /login in 454ms
+ GET /login [32m200[39m in 540ms
+ GET /api/auth/providers [32m200[39m in 248ms
+ GET /api/auth/csrf [32m200[39m in 232ms
+ POST /api/auth/callback/credentials [33m401[39m in 328ms
+ GET /api/auth/providers [32m200[39m in 256ms
  GET /api/auth/csrf [32m200[39m in 234ms
- POST /api/auth/signout [32m200[39m in 247ms
- GET /login [32m200[39m in 162ms
- GET /api/auth/session [32m200[39m in 290ms
+ POST /api/auth/callback/credentials [32m200[39m in 311ms
+ GET /api/auth/session [32m200[39m in 229ms
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 1081ms
+ GET /dashboard [32m200[39m in 1170ms
+ [32m[1m✓[22m[39m Compiled /dashboard/tasks in 193ms
+ GET /dashboard/tasks [32m200[39m in 227ms
+ [32m[1m✓[22m[39m Compiled /api/tasks in 105ms
+ GET /api/tasks [32m200[39m in 385ms
+ GET /api/tasks [32m200[39m in 265ms
+ [32m[1m✓[22m[39m Compiled /dashboard/profile in 214ms
+ GET /dashboard/profile [32m200[39m in 279ms
+ GET /dashboard [32m200[39m in 76ms
 [?25h
