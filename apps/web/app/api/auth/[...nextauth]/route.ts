@@ -1,10 +1,13 @@
-import NextAuth, { NextAuthOptions } from "next-auth"; // <-- Use NextAuthOptions
+// apps/web/app/api/auth/[...nextauth]/route.ts
+
+import NextAuth, { NextAuthOptions } from "next-auth";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import clientPromise from "@/lib/mongodb";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
+import { NextRequest, NextResponse } from "next/server";
 
-export const authOptions: NextAuthOptions = { // <-- Use NextAuthOptions
+export const authOptions: NextAuthOptions = {
   adapter: MongoDBAdapter(clientPromise, { databaseName: "pracsphere" }),
   providers: [
     CredentialsProvider({
@@ -14,30 +17,17 @@ export const authOptions: NextAuthOptions = { // <-- Use NextAuthOptions
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (
-          !credentials ||
-          typeof credentials.email !== "string" ||
-          typeof credentials.password !== "string"
-        ) {
-          return null;
-        }
+        if (!credentials?.email || !credentials?.password) return null;
 
-        const { email, password } = credentials;
         const client = await clientPromise;
         const usersCollection = client.db("pracsphere").collection("users");
-        const user = await usersCollection.findOne({ email });
+        const user = await usersCollection.findOne({ email: credentials.email });
 
-        if (!user || !user.password) {
-          return null;
-        }
+        if (!user || !user.password) return null;
 
-        const passwordsMatch = await bcrypt.compare(password, user.password);
+        const passwordsMatch = await bcrypt.compare(credentials.password, user.password);
+        if (!passwordsMatch) return null;
 
-        if (!passwordsMatch) {
-          return null;
-        }
-
-        // Return the user object with the stringified ID
         return {
           id: user._id.toString(),
           name: user.name,
@@ -50,24 +40,18 @@ export const authOptions: NextAuthOptions = { // <-- Use NextAuthOptions
     strategy: "jwt",
   },
   secret: process.env.NEXTAUTH_SECRET,
-
-  // Add this callbacks block to include the user's ID in the session
   callbacks: {
     async jwt({ token, user }) {
-      if (user) {
-        token.id = user.id;
-      }
+      if (user) token.id = user.id;
       return token;
     },
     async session({ session, token }) {
-      if (session.user) {
-        session.user.id = token.id as string;
-      }
+      if (session.user) session.user.id = token.id as string;
       return session;
     },
   },
 };
 
+// ✅ Correct handler exports for Next.js App Router
 const handler = NextAuth(authOptions);
-
 export { handler as GET, handler as POST };

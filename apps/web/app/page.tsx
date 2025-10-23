@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { CheckSquare, Users, TrendingUp, MoveDown, Sun, Moon } from 'lucide-react';
+import { CheckSquare, Users, TrendingUp, Sun, Moon } from 'lucide-react';
 import { ScrollDownButton } from './components/scroll-down-button';
 
 export default function LandingPage() {

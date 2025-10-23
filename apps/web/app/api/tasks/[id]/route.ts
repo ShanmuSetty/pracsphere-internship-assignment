@@ -1,23 +1,24 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/route";
 import clientPromise from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
 
 // PUT: Update a specific task
-export async function PUT(request: Request, { params }: { params: { id: string } }) {
+export async function PUT(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.id) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
   }
 
   try {
+    const params = await context.params; // <-- await here
     const { id } = params;
+
     const { title, description, status } = await request.json();
     const client = await clientPromise;
     const db = client.db("pracsphere");
 
-    // SECURITY: Ensure the user can only update their own task
     await db.collection("tasks").updateOne(
       { _id: new ObjectId(id), userId: new ObjectId(session.user.id) },
       { $set: { title, description, status } }
@@ -29,19 +30,19 @@ export async function PUT(request: Request, { params }: { params: { id: string }
   }
 }
 
-// DELETE: Delete a specific task
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.id) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
   }
 
   try {
+    const params = await context.params; // <-- await here
     const { id } = params;
+
     const client = await clientPromise;
     const db = client.db("pracsphere");
 
-    // SECURITY: Ensure the user can only delete their own task
     const result = await db.collection("tasks").deleteOne({
       _id: new ObjectId(id),
       userId: new ObjectId(session.user.id),
@@ -56,3 +57,4 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
     return NextResponse.json({ message: "Server Error" }, { status: 500 });
   }
 }
+

@@ -8,8 +8,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 
 type DashboardSidebarProps = {
-  theme?: "light" | "dark";
-  onToggleTheme?: () => void;
+  
 };
 
 const NextLinkWrapper = ({
@@ -22,7 +21,7 @@ const NextLinkWrapper = ({
   className?: string;
 }) => <Link href={href} className={className}>{children}</Link>;
 
-export function DashboardSidebar({ theme, onToggleTheme }: DashboardSidebarProps) {
+export function DashboardSidebar({}: DashboardSidebarProps) {
   const pathname = usePathname();
 
   const links = [
