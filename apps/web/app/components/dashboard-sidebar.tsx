@@ -7,9 +7,6 @@ import { LayoutDashboard, CheckSquare, User } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-type DashboardSidebarProps = {
-  
-};
 
 const NextLinkWrapper = ({
   href,
@@ -21,7 +18,7 @@ const NextLinkWrapper = ({
   className?: string;
 }) => <Link href={href} className={className}>{children}</Link>;
 
-export function DashboardSidebar({}: DashboardSidebarProps) {
+export function DashboardSidebar() {
   const pathname = usePathname();
 
   const links = [
@@ -40,8 +37,6 @@ export function DashboardSidebar({}: DashboardSidebarProps) {
       LinkComponent={NextLinkWrapper}
       onSignOut={handleSignOut}
       onRefresh={handleRefresh}
-                 // ✅ Now allowed
-      // ✅ Now allowed
     />
   );
 }

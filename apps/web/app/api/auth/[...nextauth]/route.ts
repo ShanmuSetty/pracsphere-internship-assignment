@@ -5,8 +5,6 @@ import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import clientPromise from "@/lib/mongodb";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
-import { NextRequest, NextResponse } from "next/server";
-
 export const authOptions: NextAuthOptions = {
   adapter: MongoDBAdapter(clientPromise, { databaseName: "pracsphere" }),
   providers: [
@@ -52,6 +50,6 @@ export const authOptions: NextAuthOptions = {
   },
 };
 
-// ✅ Correct handler exports for Next.js App Router
+
 const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
