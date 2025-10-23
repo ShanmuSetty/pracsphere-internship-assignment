@@ -8,28 +8,35 @@
    - Environments: .env.local
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 881ms
- [37m[1m○[22m[39m Compiling /api/auth/[...nextauth] ...
- [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 979ms
+ [32m[1m✓[22m[39m Ready in 1005ms
  [37m[1m○[22m[39m Compiling /dashboard/tasks ...
- GET /api/auth/session [32m200[39m in 2126ms
- [32m[1m✓[22m[39m Compiled /dashboard/tasks in 1458ms
- GET /dashboard/tasks [32m200[39m in 1641ms
- [32m[1m✓[22m[39m Compiled /api/tasks in 166ms
- GET /api/auth/session [32m200[39m in 258ms
- GET /favicon.ico?favicon.0b3bf435.ico [32m200[39m in 413ms
- GET /api/tasks [32m200[39m in 465ms
- POST /api/tasks [32m201[39m in 313ms
- [32m[1m✓[22m[39m Compiled /api/tasks/[id] in 175ms
- PUT /api/tasks/68fa64a67907a3a87502cdf0 [32m200[39m in 1240ms
- GET /api/auth/session [32m200[39m in 262ms
- GET /api/auth/session [32m200[39m in 264ms
- DELETE /api/tasks/68fa64a67907a3a87502cdf0 [32m200[39m in 293ms
- GET /api/auth/session [32m200[39m in 307ms
- [32m[1m✓[22m[39m Compiled in 127ms
- GET /api/auth/session [32m200[39m in 289ms
- GET /dashboard/tasks [32m200[39m in 193ms
- GET /favicon.ico?favicon.0b3bf435.ico [32m200[39m in 272ms
- GET /api/auth/session [32m200[39m in 266ms
- GET /api/tasks [32m200[39m in 301ms
+ GET /dashboard/tasks [32m200[39m in 2946ms
+ [32m[1m✓[22m[39m Compiled /dashboard/tasks in 3.1s
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 460ms
+ GET /favicon.ico?favicon.0b3bf435.ico [32m200[39m in 663ms
+ GET /api/tasks [32m200[39m in 773ms
+ GET /api/auth/session [32m200[39m in 1293ms
+ GET /dashboard [32m200[39m in 99ms
+ [32m[1m✓[22m[39m Compiled in 69ms
+ [32m[1m✓[22m[39m Compiled in 39ms
+ GET /api/auth/session [32m200[39m in 317ms
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ GET /dashboard [32m200[39m in 352ms
+ GET /favicon.ico?favicon.0b3bf435.ico [32m200[39m in 240ms
+ GET /api/auth/session [32m200[39m in 244ms
+ GET /dashboard/tasks [32m200[39m in 61ms
+ GET /api/tasks [32m200[39m in 256ms
+ GET /api/tasks [32m200[39m in 278ms
+ [32m[1m✓[22m[39m Compiled /dashboard/profile in 294ms
+ GET /dashboard/profile [32m200[39m in 345ms
+ GET /dashboard [32m200[39m in 66ms
+ [32m[1m✓[22m[39m Compiled in 210ms
+ GET /api/auth/session [32m200[39m in 337ms
+ GET /dashboard/tasks [32m200[39m in 139ms
+ GET /api/tasks [32m200[39m in 319ms
+ GET /dashboard [32m200[39m in 82ms
+ GET /api/tasks [32m200[39m in 271ms
 [?25h
