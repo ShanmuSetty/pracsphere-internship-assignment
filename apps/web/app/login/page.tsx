@@ -165,7 +165,7 @@ export default function LoginPage() {
           <p className={`text-center text-sm mt-6 transition-colors duration-500 ${
             isDark ? 'text-[#70D56D]/80' : 'text-[#004643]/70'
           }`}>
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/signup" className={`font-medium transition-colors ${
               isDark ? 'text-[#00DFBB] hover:text-[#70D56D]' : 'text-[#3DB876] hover:text-[#00DFBB]'
             }`}>

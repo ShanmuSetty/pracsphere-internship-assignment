@@ -8,30 +8,53 @@
    - Environments: .env.local
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 891ms
+ [32m[1m✓[22m[39m Ready in 995ms
  [37m[1m○[22m[39m Compiling / ...
- [32m[1m✓[22m[39m Compiled / in 1879ms
- GET / [32m200[39m in 2113ms
- [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 336ms
- GET /api/auth/session [32m200[39m in 1410ms
- [32m[1m✓[22m[39m Compiled /login in 454ms
- GET /login [32m200[39m in 540ms
- GET /api/auth/providers [32m200[39m in 248ms
- GET /api/auth/csrf [32m200[39m in 232ms
- POST /api/auth/callback/credentials [33m401[39m in 328ms
- GET /api/auth/providers [32m200[39m in 256ms
- GET /api/auth/csrf [32m200[39m in 234ms
- POST /api/auth/callback/credentials [32m200[39m in 311ms
- GET /api/auth/session [32m200[39m in 229ms
+ [32m[1m✓[22m[39m Compiled / in 1777ms
+ GET / [32m200[39m in 2006ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 429ms
+ GET /api/auth/session [32m200[39m in 1541ms
+ [32m[1m✓[22m[39m Compiled /login in 190ms
+ GET /login [32m200[39m in 255ms
+ GET /api/auth/session [32m200[39m in 242ms
+ [32m[1m✓[22m[39m Compiled /signup in 175ms
+ GET /signup [32m200[39m in 231ms
+ GET /api/auth/session [32m200[39m in 240ms
+ GET /api/auth/session [32m200[39m in 327ms
+ GET /signup [32m200[39m in 142ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 134ms
+ GET /api/auth/session [32m200[39m in 267ms
+ GET /favicon.ico?favicon.0b3bf435.ico [32m200[39m in 373ms
+ [32m[1m✓[22m[39m Compiled /api/signup in 97ms
+ POST /api/signup [32m201[39m in 477ms
+ GET /login [32m200[39m in 71ms
+ GET /api/auth/providers [32m200[39m in 261ms
+ GET /api/auth/csrf [32m200[39m in 238ms
+ POST /api/auth/callback/credentials [32m200[39m in 324ms
+ GET /api/auth/session [32m200[39m in 271ms
  [37m[1m○[22m[39m Compiling /dashboard ...
- [32m[1m✓[22m[39m Compiled /dashboard in 1081ms
- GET /dashboard [32m200[39m in 1170ms
- [32m[1m✓[22m[39m Compiled /dashboard/tasks in 193ms
- GET /dashboard/tasks [32m200[39m in 227ms
- [32m[1m✓[22m[39m Compiled /api/tasks in 105ms
- GET /api/tasks [32m200[39m in 385ms
- GET /api/tasks [32m200[39m in 265ms
- [32m[1m✓[22m[39m Compiled /dashboard/profile in 214ms
- GET /dashboard/profile [32m200[39m in 279ms
- GET /dashboard [32m200[39m in 76ms
+ [32m[1m✓[22m[39m Compiled /dashboard in 1111ms
+ GET /dashboard [32m200[39m in 1203ms
+ [32m[1m✓[22m[39m Compiled /dashboard/tasks in 182ms
+ GET /dashboard/tasks [32m200[39m in 218ms
+ [32m[1m✓[22m[39m Compiled /api/tasks in 86ms
+ GET /api/tasks [32m200[39m in 360ms
+ GET /api/tasks [32m200[39m in 258ms
+ POST /api/tasks [32m201[39m in 295ms
+ [32m[1m✓[22m[39m Compiled /api/tasks/[id] in 126ms
+Error: Route "/api/tasks/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at PUT (app/api/tasks/[id]/route.ts:15:13)
+[0m [90m 13 |[39m
+ [90m 14 |[39m   [36mtry[39m {
+[31m[1m>[22m[39m[90m 15 |[39m     [36mconst[39m { id } [33m=[39m params[33m;[39m
+ [90m    |[39m             [31m[1m^[22m[39m
+ [90m 16 |[39m     [36mconst[39m { title[33m,[39m description[33m,[39m status } [33m=[39m [36mawait[39m request[33m.[39mjson()[33m;[39m
+ [90m 17 |[39m     [36mconst[39m client [33m=[39m [36mawait[39m clientPromise[33m;[39m
+ [90m 18 |[39m     [36mconst[39m db [33m=[39m client[33m.[39mdb([32m"pracsphere"[39m)[33m;[39m[0m
+ PUT /api/tasks/68fa62ad82babb676de96f81 [32m200[39m in 1185ms
+ GET /dashboard [32m200[39m in 71ms
+ GET /api/auth/csrf [32m200[39m in 261ms
+ POST /api/auth/signout [32m200[39m in 238ms
+ GET /login [32m200[39m in 88ms
+ GET /api/auth/session [32m200[39m in 241ms
 [?25h
